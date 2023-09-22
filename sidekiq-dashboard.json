@@ -661,7 +661,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(sidekiq_queue_latency_seconds[1m])",
+          "expr": "sum(rate(sidekiq_queue_latency_seconds[1m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{name}}",
