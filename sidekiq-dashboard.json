@@ -78,7 +78,7 @@
       "pluginVersion": "7.0.4",
       "targets": [
         {
-          "expr": "rate(sidekiq_enqueued_jobs[1m])",
+          "expr": "sum(rate(sidekiq_enqueued_jobs[1m]))",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -150,7 +150,7 @@
       "pluginVersion": "7.0.4",
       "targets": [
         {
-          "expr": "rate(sidekiq_processed_jobs_total[1m])",
+          "expr": "sum(rate(sidekiq_processed_jobs_total[1m]))",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -226,7 +226,7 @@
       "pluginVersion": "7.0.4",
       "targets": [
         {
-          "expr": "increase(sidekiq_failed_jobs_total[1m])",
+          "expr": "sum(increase(sidekiq_failed_jobs_total[1m]))",
           "format": "time_series",
           "instant": true,
           "interval": "",
